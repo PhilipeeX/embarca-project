@@ -1,0 +1,20 @@
+<div class="state-index">
+  <h1>Lista de Estados</h1>
+
+  <table class="state-table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @states.each do |state| %>
+      <tr>
+        <td><%= state.id %></td>
+        <td><%= state.name %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
