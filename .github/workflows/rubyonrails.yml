@@ -1,0 +1,59 @@
+name: "Ruby on Rails CI"
+on:
+  pull_request:
+    branches:
+      - main
+      - 'release/*'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:11-alpine
+        ports:
+          - "5432:5432"
+        env:
+          POSTGRES_DB: embarca-project_test
+          POSTGRES_USER: rails
+          POSTGRES_PASSWORD: password
+    env:
+      RAILS_ENV: test
+      DATABASE_URL: "postgres://rails:password@localhost:5432/embarca-project_test"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Ruby and install gems
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7.0'
+          bundler-cache: true
+      - name: Install rails 5.2.8 and dependencies
+        run: | 
+          gem install nokogiri -v 1.15.5
+          gem install net-imap -v 0.3.7
+          gem install rails -v '5.2.8'
+          bundle install
+      - name: Run database migrations
+        run: rails db:migrate RAILS_ENV=test
+      - name: Run tests
+        run: bundle exec rspec --exclude-pattern 'spec/features/**/*_spec.rb' --format progress
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Ruby and install gems
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7.0'
+          bundler-cache: true
+      - name: Install rails 5.2.8 and dependencies
+        run: |
+          gem install nokogiri -v 1.15.5
+          gem install net-imap -v 0.3.7
+          gem install rails -v '5.2.8'
+          bundle install
+      - name: Lint Ruby files
+        run: bundle exec rubocop --parallel
