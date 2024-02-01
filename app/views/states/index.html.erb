@@ -1,0 +1,20 @@
+<div class="state-index">
+  <h1><%= t('.title') %></h1>
+
+  <table class="state-table">
+    <thead>
+    <tr>
+      <th><%= I18n.t('activerecord.attributes.state.id') %></th>
+      <th><%= I18n.t('activerecord.attributes.state.name') %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @states.each do |state| %>
+      <tr>
+        <td><%= state.id %></td>
+        <td><%= state.name %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

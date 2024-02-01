@@ -1,0 +1,21 @@
+// Place all the styles related to the States controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.state-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.state-table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.state-table th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
