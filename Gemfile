@@ -14,8 +14,6 @@ gem 'sass-rails', '~> 5.0'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec', '~> 3.12'
-  gem 'rspec-rails', '~> 4.1.0'
   gem 'rubocop', '~> 1.58'
   gem 'rubocop-capybara', '~> 2.20'
   gem 'rubocop-rspec', '~> 2.26', '>= 2.26.1'
@@ -30,8 +28,12 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
-  gem 'chromedriver-helper'
-  gem 'selenium-webdriver'
+  gem 'webdrivers', '~> 5.3', '>= 5.3.1'
+  gem 'selenium-webdriver', '~> 4.0', '>= 4.0.3'
+  gem 'factory_bot', '~> 5.2'
+  gem 'rspec', '~> 3.12'
+  gem 'rspec-rails', '~> 4.1.0'
+  gem 'rails-controller-testing', '~> 0.0.3'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
