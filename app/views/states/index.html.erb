@@ -1,11 +1,11 @@
 <div class="state-index">
-  <h1>Lista de Estados</h1>
+  <h1><%= t('.title') %></h1>
 
   <table class="state-table">
     <thead>
     <tr>
-      <th>ID</th>
-      <th>Nome</th>
+      <th><%= I18n.t('activerecord.attributes.state.id') %></th>
+      <th><%= I18n.t('activerecord.attributes.state.name') %></th>
     </tr>
     </thead>
     <tbody>

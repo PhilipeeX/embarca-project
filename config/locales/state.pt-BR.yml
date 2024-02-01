@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    models:
+      state:
+        one: 'Estado'
+        other: 'Estados'
+    attributes:
+      state:
+        id: 'ID'
+        name: 'Nome'
+        created_at: 'Cadastrado em'
+        updated_at: 'Atualizado em'
