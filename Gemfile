@@ -28,12 +28,12 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
-  gem 'webdrivers', '~> 5.3', '>= 5.3.1'
-  gem 'selenium-webdriver', '~> 4.0', '>= 4.0.3'
   gem 'factory_bot', '~> 5.2'
+  gem 'rails-controller-testing', '~> 0.0.3'
   gem 'rspec', '~> 3.12'
   gem 'rspec-rails', '~> 4.1.0'
-  gem 'rails-controller-testing', '~> 0.0.3'
+  gem 'selenium-webdriver', '~> 4.0', '>= 4.0.3'
+  gem 'webdrivers', '~> 5.3', '>= 5.3.1'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
