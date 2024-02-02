@@ -5,10 +5,8 @@ class CitiesController < ApplicationController
   def index
     @cities = City.all
     @states = State.all
-    @selected_state = params[:state_id]
 
-    if @selected_state.present?
-      @cities = @cities.where(state_id: @selected_state)
-    end
+    @cities = @cities.where(state_id: params[:state_id]) if params[:state_id].present?
+    @cities = @cities.where('lower(name) LIKE ?', "%#{params[:city_name].downcase}%") if params[:city_name].present?
   end
 end

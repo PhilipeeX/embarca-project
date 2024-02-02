@@ -3,6 +3,10 @@
   <%= form_tag(cities_path, method: 'get', html: { class: 'filter' }) do %>
     <%= label_tag 'state_id', 'Filtrar por estado:' %>
     <%= select_tag 'state_id', options_for_select(@states.map { |state| [state.name, state.id] }, @selected_state), include_blank: true %>
+
+    <%= label_tag 'city_name', 'Filtrar por cidade:' %>
+    <%= text_field_tag 'city_name', params[:city_name] %>
+
     <%= submit_tag 'Filtrar' %>
   <% end %>
   <table class="cities-table">
