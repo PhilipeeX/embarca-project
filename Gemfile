@@ -14,6 +14,7 @@ gem 'sass-rails', '~> 5.0'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'dotenv', '~> 2.8', '>= 2.8.1'
   gem 'rubocop', '~> 1.58'
   gem 'rubocop-capybara', '~> 2.20'
   gem 'rubocop-rspec', '~> 2.26', '>= 2.26.1'
