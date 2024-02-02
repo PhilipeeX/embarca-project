@@ -4,10 +4,8 @@ services:
     image: postgres:latest
     ports:
       - "5432:5432"
-    volumes:
-      - "dbdata:/var/lib/postgresql/data"
     environment:
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
   web:
     build: .
     volumes:
@@ -17,6 +15,4 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
-volumes:
-  dbdata:
+      - DATABASE_URL=postgres://postgres:${POSTGRES_PASSWORD}@db:5432/postgres
