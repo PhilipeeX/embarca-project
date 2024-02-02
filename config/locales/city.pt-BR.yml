@@ -3,7 +3,7 @@ pt-BR:
     models:
       city:
         one: 'Cidade'
-        other: 'Estado'
+        other: 'Cidades'
     attributes:
       city:
         id: 'ID'
