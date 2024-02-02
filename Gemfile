@@ -33,6 +33,7 @@ group :test do
   gem 'rspec', '~> 3.12'
   gem 'rspec-rails', '~> 4.1.0'
   gem 'selenium-webdriver', '~> 4.0', '>= 4.0.3'
+  gem 'shoulda-matchers', '~> 5.3'
   gem 'webdrivers', '~> 5.3', '>= 5.3.1'
 end
 
