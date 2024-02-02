@@ -28,6 +28,7 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
+  gem 'database_cleaner'
   gem 'factory_bot', '~> 5.2'
   gem 'rails-controller-testing', '~> 0.0.3'
   gem 'rspec', '~> 3.12'
