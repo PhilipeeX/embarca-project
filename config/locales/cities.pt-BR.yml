@@ -1,0 +1,5 @@
+pt-BR:
+  cities:
+    index:
+      title: 'Lista de Cidades'
+      city_name: 'Nome da cidade'

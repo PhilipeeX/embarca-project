@@ -9,6 +9,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <main>
+      <%= link_to I18n.t('activerecord.models.state.other'), root_path %>
+      <%= link_to I18n.t('activerecord.models.city.other'), cities_path %>
+      <%= yield %>
+    </main>
   </body>
 </html>
