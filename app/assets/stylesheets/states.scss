@@ -2,20 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .state-index {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
+  h1 {
+    font-size: 24px;
+    color: #333;
+  }
 
-.state-table {
-  border-collapse: collapse;
-  width: 50%;
-}
+  .state-table {
+    width: 50%;
+    border-collapse: collapse;
 
-.state-table th, td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: left;
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+    }
+  }
 }
