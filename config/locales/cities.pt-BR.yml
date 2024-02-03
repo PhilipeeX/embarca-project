@@ -2,4 +2,8 @@ pt-BR:
   cities:
     index:
       title: 'Lista de Cidades'
+      filter_by_state: 'Filtrar por estado'
+      filter_by_city: 'Filtrar por cidade'
+      filter_btn: 'Filtrar'
       city_name: 'Nome da cidade'
+

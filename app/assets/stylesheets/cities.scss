@@ -3,19 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // app/assets/stylesheets/cities.scss
 
-h1 {
+.cities {
   text-align: center;
-  margin-bottom: 15px;
+
+  .filter {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
 }
 
-table {
-  margin: 0 auto;
-  border-collapse: collapse;
-  width: 50%;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-}
