@@ -9,6 +9,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <main>
+      <div class="nav-box">
+        <div class="nav-items">
+          <%= link_to I18n.t('activerecord.models.state.other'), root_path, class: 'nav-button' %>
+          <%= link_to I18n.t('activerecord.models.city.other'), cities_path, class: 'nav-button' %>
+        </div>
+      </div>
+      <%= yield %>
+    </main>
   </body>
 </html>

@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    models:
+      city:
+        one: 'Cidade'
+        other: 'Cidades'
+    attributes:
+      city:
+        id: 'ID'
+        name: 'Nome'
+        created_at: 'Cadastrado em'
+        updated_at: 'Atualizado em'
