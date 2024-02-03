@@ -1,18 +1,21 @@
 <div class="cities">
-  <h1><%= t '.title' %></h1>
-  <%= form_tag(cities_path, method: 'get', html: { class: 'filter' }) do %>
-    <%= label_tag 'state_id', t('.filter_by_state') %>
-    <%= select_tag 'state_id', options_for_select(@states.map { |state| [state.name, state.id] }, @selected_state), include_blank: true %>
+  <h1><%= t('.title') %></h1>
+  <div class="form-block">
+    <%= form_tag(cities_path, method: 'get', class: 'form') do %>
+      <div class="form-input">
+        <%= text_field_tag 'city_name', params[:city_name], class: 'city-search', placeholder: 'Pesquise a cidade desejada' %>
+        <%= submit_tag t('.filter_btn'), class: 'form-submit' %>
+      </div>
 
-    <%= label_tag 'city_name', t('.filter_by_city') %>
-    <%= text_field_tag 'city_name', params[:city_name] %>
-
-    <%= submit_tag t('.filter_btn') %>
-  <% end %>
+      <div>
+        <%= select_tag 'state_id', options_for_select(@states.map { |state| [state.name, state.id] }, @selected_state), include_blank: 'Selecione um estado' %>
+      </div>
+    <% end %>
+  </div>
   <table class="cities-table">
     <thead>
     <tr>
-      <th><%= t '.city_name' %></th>
+      <th><%= t('.city_name') %></th>
     </tr>
     </thead>
     <tbody>
