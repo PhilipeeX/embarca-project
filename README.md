@@ -89,7 +89,7 @@ Execute o comando de testes em RSpec
 - Verifica a qualidade do código usando linters como rubocop, garantindo consistência e boas práticas.
 - Além disso, quando um PR é mergeado na 'main', configurei para que automaticamente uma nova imagem Docker seja construída e enviada para o Dockerhub.
 
-[Imagem do projeto no Dockerhub](https://)
+[Imagem do projeto no Dockerhub](https://hub.docker.com/r/philipex/embarca-project)
 
 
 # Atribuições
@@ -122,9 +122,12 @@ Execute o comando de testes em RSpec
 - Ao considerar a extensão da suíte de testes RSpec para atender aos requisitos do cenário, foi observado que a métrica Metrics/BlockLength do Rubocop ultrapassou o limite em um dos blocos RSpec.describe.
 - Para manter a conformidade com a métrica do Rubocop e garantir a legibilidade do código, foi necessário desativar temporariamente a verificação Metrics/BlockLength usando o comentário ``# rubocop:disable Metrics/BlockLength`` no bloco específico.
 <br>
-> <a href="https://github.com/PhilipeeX/embarca-project/blob/feature/9-adicionar-readme-ao-projeto/spec/controllers/cities/cities_filter_spec.rb" target="_blank">spec/controllers/cities/cities_filter_spec.rb</a><br>
+> <a href="https://github.com/PhilipeeX/embarca-project/blob/main/spec/controllers/cities/cities_filter_spec.rb" target="_blank">spec/controllers/cities/cities_filter_spec.rb</a><br>
 
 Essas medidas foram tomadas para cumprir tanto a exigência de criação da suíte de testes quanto a de ausência de reclamações do Rubocop, proporcionando um código claro e eficiente.
+
+## Github Workflow
+O fluxo de trabalho e como as tarefas foram desenvolvidas pode ser acessado em: <a href="https://github.com/users/PhilipeeX/projects/38/views/1" target="_blank">Board das tarefas</a>
 
 ## Apêndice
 Author: <strong>Philipe Rodrigues (dev.philipe@outlook.com)</strong>
