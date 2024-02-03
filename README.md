@@ -55,7 +55,8 @@ Acesse a aplicação em localhost porta 3000
 ![Image](https://github.com/PhilipeeX/embarca-project/assets/85847179/b901d397-8bc2-4092-ad0c-67f4cb2658ad)
 <br>
 #### Acesse o pipeline de testes no link abaixo <br>
-[GithubActions](https://github.com/PhilipeeX/embarca-project/actions/workflows/rubyonrails.yml) <br>
+<a href="https://github.com/PhilipeeX/embarca-project/actions/workflows/rubyonrails.yml" target="_blank">GithubActions</a>
+<br>
 Para rodar os testes, execute o seguintes comandos:
 
 Após ter acessado a aplicação no Docker, será necessário executar o comando abaixo
@@ -99,21 +100,21 @@ Execute o comando de testes em RSpec
 > - [x] Esta aplicação deve ser escrita com a versão 2.7.0 do Ruby e a versão 5.x do Rails.
 > - [x] Esta aplicação deve usar o PostgreSQL como banco de dados.
 > - [x] É necessário usar o Rubocop para garantir que seu código siga os padrões.<br>
-    > [Pull Request](https://github.com/PhilipeeX/embarca-project/pull/3)
+    > <a href="https://github.com/PhilipeeX/embarca-project/pull/3" target="_blank">Pull Request</a>
 #
 > [!TIP]
 > - [x] Uma tabela com algumas cidades do Paraná, Santa Catarina e Rio Grande do Sul (pelo menos 3 de cada estado).<br>
-    > [Pull Request](https://github.com/PhilipeeX/embarca-project/pull/5)
+    > <a href="https://github.com/PhilipeeX/embarca-project/pull/5" target="_blank">Pull Request</a>
 #
 > [!TIP]
 > - [x] Esta aplicação deve ser executada em um contêiner Docker com docker-compose.<br>
-    >   [Pull Request](https://github.com/PhilipeeX/embarca-project/pull/7)
+    >   <a href="https://github.com/PhilipeeX/embarca-project/pull/7" target="_blank">Pull Request</a>
 #
 > [!TIP]
 > - [x] Uma rota para recuperar todas as cidades com base em alguns parâmetros recebidos: Estado e Parte do nome.
 > - [x] Uma interface de usuário (frontend) para exibir todas as cidades que correspondem à pesquisa.
 > - [x] Uma suíte de testes para esse cenário.<br>
-    >  [Pull Request](https://github.com/PhilipeeX/embarca-project/pull/10)
+    >  <a href="https://github.com/PhilipeeX/embarca-project/pull/10" target="_blank">Pull Request</a>
 
 ## Observações e destaques
 
@@ -122,7 +123,7 @@ Execute o comando de testes em RSpec
 - Ao considerar a extensão da suíte de testes RSpec para atender aos requisitos do cenário, foi observado que a métrica Metrics/BlockLength do Rubocop ultrapassou o limite em um dos blocos RSpec.describe.
 - Para manter a conformidade com a métrica do Rubocop e garantir a legibilidade do código, foi necessário desativar temporariamente a verificação Metrics/BlockLength usando o comentário # rubocop:disable Metrics/BlockLength no bloco específico.
 <br>
-> ** link do arquivo de teste aqui.
+> <a href="https://github.com/PhilipeeX/embarca-project/blob/feature/9-adicionar-readme-ao-projeto/spec/controllers/cities/cities_filter_spec.rb" target="_blank">spec/controllers/cities/cities_filter_spec.rb</a>
 #### Essas medidas foram tomadas para cumprir tanto a exigência de criação da suíte de testes quanto a de ausência de reclamações do Rubocop, proporcionando um código claro e eficiente.
 
 ## Apêndice
