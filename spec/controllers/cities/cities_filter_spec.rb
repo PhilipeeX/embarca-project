@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 
-# rubocop:disable Metrics/BlockLength
 RSpec.describe CitiesController, type: :controller do
   let!(:parana) { create(:state, name: 'Paraná') }
   let!(:sc) { create(:state, name: 'Santa Catarina') }
@@ -85,3 +85,4 @@ RSpec.describe CitiesController, type: :controller do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

@@ -20,4 +20,3 @@ class CitiesController < ApplicationController
     @cities = @cities.where('name ILIKE ?', "%#{params[:city_name]}%") if params[:city_name].present?
   end
 end
-

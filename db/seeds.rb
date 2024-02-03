@@ -25,7 +25,6 @@ rs_cities = [
   'Vacaria', 'Sapucaia do Sul', 'Capão da Canoa', 'Santana do Livramento', 'Ijuí'
 ]
 
-
 rs_cities.each do |city_name|
   City.create(name: city_name, state: rio_grande_do_sul)
 end
