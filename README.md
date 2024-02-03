@@ -5,8 +5,7 @@
 
 
 ## Screenshots ou  GIFs
-
-![App Screenshot](https://github.com/PhilipeeX/embarca-project/assets/85847179/84d23b5a-4b9b-4180-bdac-810831c5bf11)
+![App Gif](https://github.com/PhilipeeX/embarca-project/assets/85847179/ebf08ee5-5418-4ed9-b737-b26142b71186)
 
 > O projeto é uma aplicação Ruby on Rails que oferece uma interface para gerenciar e pesquisar cidades em diferentes estados do Brasil. A aplicação oferece uma rota para recuperar cidades aplicando filtros de busca por estado, busca por parte do nome da cidade e busca combinada por estado e parte do nome. Construído utilizando a versão 2.7.0 do Ruby e a versão 5.x do Rails, o sistema utiliza o PostgreSQL como banco de dados e é executado em um contêiner Docker com docker-compose.
 ## Stack utilizada
@@ -121,10 +120,11 @@ Execute o comando de testes em RSpec
 - A solicitação do teste técnico incluiu a criação de uma suíte de testes específica para o cenário descrito. ("4. A test suite for this scenario").
 - Foi enfatizado que o código não deveria gerar reclamações pelo Rubocop. ("1. Your code should not have any Rubocop complain").
 - Ao considerar a extensão da suíte de testes RSpec para atender aos requisitos do cenário, foi observado que a métrica Metrics/BlockLength do Rubocop ultrapassou o limite em um dos blocos RSpec.describe.
-- Para manter a conformidade com a métrica do Rubocop e garantir a legibilidade do código, foi necessário desativar temporariamente a verificação Metrics/BlockLength usando o comentário # rubocop:disable Metrics/BlockLength no bloco específico.
+- Para manter a conformidade com a métrica do Rubocop e garantir a legibilidade do código, foi necessário desativar temporariamente a verificação Metrics/BlockLength usando o comentário ``# rubocop:disable Metrics/BlockLength`` no bloco específico.
 <br>
-> <a href="https://github.com/PhilipeeX/embarca-project/blob/feature/9-adicionar-readme-ao-projeto/spec/controllers/cities/cities_filter_spec.rb" target="_blank">spec/controllers/cities/cities_filter_spec.rb</a>
-#### Essas medidas foram tomadas para cumprir tanto a exigência de criação da suíte de testes quanto a de ausência de reclamações do Rubocop, proporcionando um código claro e eficiente.
+> <a href="https://github.com/PhilipeeX/embarca-project/blob/feature/9-adicionar-readme-ao-projeto/spec/controllers/cities/cities_filter_spec.rb" target="_blank">spec/controllers/cities/cities_filter_spec.rb</a><br>
+
+Essas medidas foram tomadas para cumprir tanto a exigência de criação da suíte de testes quanto a de ausência de reclamações do Rubocop, proporcionando um código claro e eficiente.
 
 ## Apêndice
 Author: <strong>Philipe Rodrigues (dev.philipe@outlook.com)</strong>
