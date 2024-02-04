@@ -17,3 +17,4 @@ services:
       - db
     environment:
       - DATABASE_URL=postgres://postgres:${POSTGRES_PASSWORD}@db:5432/postgres
+    command: bash -c "bundle exec rake db:seed && rails server -b 0.0.0.0"
