@@ -5,7 +5,7 @@
 
 
 ## Screenshots ou  GIFs
-![App Gif](https://github.com/PhilipeeX/embarca-project/assets/85847179/ebf08ee5-5418-4ed9-b737-b26142b71186)
+![Gif](https://github.com/PhilipeeX/embarca-project/assets/85847179/6572a0f1-38e3-4b3a-af78-30f57a82c158)
 
 > O projeto é uma aplicação Ruby on Rails que oferece uma interface para gerenciar e pesquisar cidades em diferentes estados do Brasil. A aplicação oferece uma rota para recuperar cidades aplicando filtros de busca por estado, busca por parte do nome da cidade e busca combinada por estado e parte do nome. Construído utilizando a versão 2.7.0 do Ruby e a versão 5.x do Rails, o sistema utiliza o PostgreSQL como banco de dados e é executado em um contêiner Docker com docker-compose.
 ## Stack utilizada
@@ -16,31 +16,38 @@
 
 **Database:** PostgreSQL
 
-## Acesso à aplicação em deploy através do link abaixo
-Será feito deploy...
-> obs: É necessário aguardar alguns segundos até o carregamento da página porque é um serviço gratuito.
-
 ## Rodando localmente
 
-Clone o projeto
+1) Clone o projeto
 
 ```bash
   git clone https://github.com/PhilipeeX/embarca-project
 ```
 
-Entre no diretório do projeto
+2) Entre no diretório do projeto
 
 ```bash
   cd embarca-project
 ```
-Será necessário configurar as seguintes variáveis de ambiente em um arquivo .env na raiz do projeto
+3) Será necessário configurar as seguintes variáveis de ambiente em um arquivo .env na raiz do projeto
 
 ```bash
-  POSTGRES_USER
-  POSTGRES_PASSWORD
-```
+  # .env
 
-Inicie o Docker
+  POSTGRES_USER=seu_usuario
+  POSTGRES_PASSWORD=sua_senha
+```
+> OBS: Lembre-se de substituir seu_usuario e sua_senha pelos valores reais.<br>
+
+4) Certifique-se de que nenhum outro serviço PostgreSQL está sendo executado na porta 5432.
+```bash
+  sudo lsof -i :5432
+```
+5) Caso algum serviço PostgreSQL esteja na porta 5432, pare o serviço com o seguinte comando:
+```bash
+  sudo service postgresql stop
+```
+6) Inicie o Docker
 
 ```bash
   docker-compose up -d
